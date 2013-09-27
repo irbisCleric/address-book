@@ -1,6 +1,3 @@
-Адресная книга.
-============
-
 Address book application.
 -------
 
