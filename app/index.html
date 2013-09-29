@@ -12,6 +12,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <!-- endbuild -->
     </head>
     <body>
@@ -19,18 +20,37 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
+		<div class="container">
+
+			<div class="text-center">
+				<h1>Bootstrap starter template</h1>
+				<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+			</div>
+
+			<div class="l-list js-list"></div>
+
+		</div>
+		<!-- /.container -->
+
+		<script type="text/x-handlebars-template" id="table">
+			<div class="b-contacts-container">
+				<table class= class="b-contacts-list">
+					{{#each contacts}}
+					<tr class="js-contacts-list-row">
+						<td class="b-contacts-list-cell b-cell--icon">
+							<span class="glyphicon glyphicon-user"></span>
+						</td>
+						<td class="b-contacts-list-cell">
+							{{name}}
+						</td>
+					</tr>
+					{{/each}}
+				</table>
+			</div>
+		</script>
 
 
-          </ul>
-        </div>
-
-        <!-- build:js scripts/vendor.js -->
+		<!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.min.js"></script>
         <script src="bower_components/underscore/underscore-min.js"></script>
@@ -41,6 +61,11 @@
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+		<script src="scripts/routes/router.js"></script>
+		<script src="scripts/collections/contacts.js"></script>
+		<script src="scripts/models/contacts.js"></script>
+		<script src="scripts/views/workspace.js"></script>
+		<script src="scripts/views/contacts.js"></script>
         <!-- endbuild -->
 </body>
 </html>
