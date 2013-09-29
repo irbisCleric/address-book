@@ -1,8 +1,13 @@
 {
-  "name": "testoct",
-  "version": "0.0.0",
+  "name": "Address-book",
+  "version": "0.0.1",
   "dependencies": {
-    "jquery": "~1.10.2"
+	"modernizr": "~2.6.2",
+	"jquery": "~1.10.2",
+	"underscore" : "~1.5.1",
+	"backbone" : "~1.0.0",
+	"handlebars" : "~1.0.0",
+	"bootstrap" : "~3.0.0"
   },
   "devDependencies": {}
 }

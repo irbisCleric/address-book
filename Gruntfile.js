@@ -20,42 +20,42 @@ module.exports = function (grunt) {
             dist: 'dist'
         },
         watch: {
-            //compass: {
-            //    files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-            //    tasks: ['compass:server', 'autoprefixer']
-            //},
+            /*compass: {
+                files: ['<%= yeoman.app %>/styles/{,*//*}*.{scss,sass}'],
+                tasks: ['compass:server', 'autoprefixer']
+            },
             styles: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+                files: ['<%= yeoman.app %>/styles/{,*//**//*}*.css'],
                 tasks: ['copy:styles', 'autoprefixer']
             },
-            //livereload: {
-            //    options: {
-            //        livereload: '<%= connect.options.livereload %>'
-            //    },
-            //    files: [
-            //        '<%= yeoman.// %>/*.html',
-            //        '.tmp/styles/{,*/}*.css',
-            //        '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-            //        '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-            //    ]
-            //}
+            livereload: {
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                },
+                files: [
+                    '<%= yeoman.// %>.html',
+                    '.tmp/styles/{,}*.css',
+                    '{.tmp,<%= yeoman.app %>}/scripts/{,}*.js',
+                    '<%= yeoman.app %>/images/{,}*.{png,jpg,jpeg,gif,webp,svg}'
+                ]
+            }*/
         },
         connect: {
             options: {
-                port: 9000,
+                port: 9001,
                 //livereload: 35729,
                 // change this to '0.0.0.0' to access the server from outside
                 hostname: 'localhost'
             },
-            //livereload: {
-            //    options: {
-            //        open: true,
-            //        base: [
-            //            '.tmp',
-            //            '<%= yeoman.app %>'
-            //        ]
-            //    }
-            //},
+            /*livereload: {
+                options: {
+                    open: true,
+                    base: [
+                        '.tmp',
+                        '<%= yeoman.app %>'
+                    ]
+                }
+            },*/
             test: {
                 options: {
                     base: [
@@ -104,32 +104,32 @@ module.exports = function (grunt) {
                 }
             }
         },
-        //compass: {
-        //    options: {
-        //        sassDir: '<%= yeoman.app %>/styles',
-        //        cssDir: '.tmp/styles',
-        //        generatedImagesDir: '.tmp/images/generated',
-        //        imagesDir: '<%= yeoman.app %>/images',
-        //        javascriptsDir: '<%= yeoman.app %>/scripts',
-        //        fontsDir: '<%= yeoman.app %>/styles/fonts',
-        //        importPath: '<%= yeoman.app %>/bower_components',
-        //        httpImagesPath: '/images',
-        //        httpGeneratedImagesPath: '/images/generated',
-        //        httpFontsPath: '/styles/fonts',
-        //        relativeAssets: false,
-        //        assetCacheBuster: false
-        //    },
-        //    dist: {
-        //        options: {
-        //            generatedImagesDir: '<%= yeoman.dist %>/images/generated'
-        //        }
-        //    },
-        //    server: {
-        //        options: {
-        //            debugInfo: true
-        //        }
-        //    }
-        //},
+        /*compass: {
+            options: {
+                sassDir: '<%= yeoman.app %>/styles',
+                cssDir: '.tmp/styles',
+                generatedImagesDir: '.tmp/images/generated',
+                imagesDir: '<%= yeoman.app %>/images',
+                javascriptsDir: '<%= yeoman.app %>/scripts',
+                fontsDir: '<%= yeoman.app %>/styles/fonts',
+                importPath: '<%= yeoman.app %>/bower_components',
+                httpImagesPath: '/images',
+                httpGeneratedImagesPath: '/images/generated',
+                httpFontsPath: '/styles/fonts',
+                relativeAssets: false,
+                assetCacheBuster: false
+            },
+            dist: {
+                options: {
+                    generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+                }
+            },
+            server: {
+                options: {
+                    debugInfo: true
+               }
+            }
+        },*/
         autoprefixer: {
             options: {
                 browsers: ['last 1 version']
@@ -293,7 +293,7 @@ module.exports = function (grunt) {
             'clean:server',
             'concurrent:server',
             'autoprefixer',
-            //'connect:livereload',
+//            'connect:livereload',
             'watch'
         ]);
     });
@@ -324,4 +324,9 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+
 };
