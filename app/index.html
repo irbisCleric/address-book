@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -8,64 +8,44 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Address book</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <!-- endbuild -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 10]>
+        <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-		<div class="container">
+        <!-- Add your site or application content here -->
+        <!--<p>Hello world! This is HTML5 Boilerplate.</p>-->
+        <script type="text/x-handlebars-template" id="table">
+            <div class="b-contacts-container">
+                <table class="b-contacts-list">
+                {{#each contacts}}
+                <tr class="js-contacts-list-row">
+                    <td class="b-contacts-list-cell b-cell--icon">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </td>
+                    <td class="b-contacts-list-cell">
+                        {{name}}
+                    </td>
+                </tr>
+                {{/each}}
+                </table>
+            </div>
+        </script>
 
-			<div class="text-center">
-				<h1>Bootstrap starter template</h1>
-				<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-			</div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/underscore-1.5.2.min.js"></script>
+        <script src="js/vendor/backbone-1.0.0.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
 
-			<div class="l-list js-list"></div>
-
-		</div>
-		<!-- /.container -->
-
-		<script type="text/x-handlebars-template" id="table">
-			<div class="b-contacts-container">
-				<table class= class="b-contacts-list">
-					{{#each contacts}}
-					<tr class="js-contacts-list-row">
-						<td class="b-contacts-list-cell b-cell--icon">
-							<span class="glyphicon glyphicon-user"></span>
-						</td>
-						<td class="b-contacts-list-cell">
-							{{name}}
-						</td>
-					</tr>
-					{{/each}}
-				</table>
-			</div>
-		</script>
-
-
-		<!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.min.js"></script>
-        <script src="bower_components/underscore/underscore-min.js"></script>
-        <script src="bower_components/backbone/backbone-min.js"></script>
-		<script src="bower_components/handlebars/handlebars.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-		<script src="scripts/routes/router.js"></script>
-		<script src="scripts/collections/contacts.js"></script>
-		<script src="scripts/models/contacts.js"></script>
-		<script src="scripts/views/workspace.js"></script>
-		<script src="scripts/views/contacts.js"></script>
-        <!-- endbuild -->
-</body>
+    </body>
 </html>

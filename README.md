@@ -1,7 +1,6 @@
-Address book application.
--------
+# [Address book application](http://irbis.pp.ua)
 
-Functional requirements:
+## Functional requirements:
 
 * Add/edit/delete contacts
 * Search by name/surname match through my contacts
