@@ -14,7 +14,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -22,10 +22,15 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <!--<p>Hello world! This is HTML5 Boilerplate.</p>-->
+        <div class="l-table js-table"></div>
+
         <script type="text/x-handlebars-template" id="table">
             <div class="b-contacts-container">
                 <table class="b-contacts-list">
+                <tr class="b-contacts-table-row">
+                    <th class="b-contacts-table-head">User pic</th>
+                    <th class="b-contacts-table-head">User name</th>
+                </tr>
                 {{#each contacts}}
                 <tr class="js-contacts-list-row">
                     <td class="b-contacts-list-cell b-cell--icon">
@@ -44,8 +49,16 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/underscore-1.5.2.min.js"></script>
         <script src="js/vendor/backbone-1.0.0.min.js"></script>
+        <script src="js/vendor/handlebars-1.0.0.js"></script>
+
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <script src="js/routes/router.js"></script>
+        <script src="js/collections/contacts.js"></script>
+        <script src="js/models/contacts.js"></script>
+        <script src="js/views/workspace.js"></script>
+        <script src="js/views/contacts.js"></script>
 
     </body>
 </html>
