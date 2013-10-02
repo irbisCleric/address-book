@@ -25,7 +25,7 @@ App.Routers.Workspace = Backbone.Router.extend({
 
     page404: function () {
         // #404
-        App.router.navigate('404');
+        alert('There will be 404 page');
     }
 
 });
