@@ -13,6 +13,7 @@ App.Routers.Workspace = Backbone.Router.extend({
     routes: {
         '': 'index',
         'index': 'index',
+        '404': 'page404',
         ':page': 'index'
     },
 
@@ -20,6 +21,11 @@ App.Routers.Workspace = Backbone.Router.extend({
     // #index
         App.router.navigate('index');
         new App.Views.Contacts();
+    },
+
+    page404: function () {
+        // #404
+        App.router.navigate('404');
     }
 
 });
