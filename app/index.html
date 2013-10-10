@@ -13,6 +13,9 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
         <link rel="stylesheet" href="css/main.css">
         <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
     </head>
@@ -22,7 +25,10 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="l-table js-table"></div>
+
+        <div class="container">
+            <div class="col-md-3 l-table js-table"></div>
+        </div>
 
         <script type="text/x-handlebars-template" id="table">
             <div class="b-contacts-container">
@@ -34,7 +40,6 @@
                 {{#each contacts}}
                 <tr class="js-contacts-list-row">
                     <td class="b-contacts-list-cell b-cell--icon">
-                        <span class="glyphicon glyphicon-user"></span>
                     </td>
                     <td class="b-contacts-list-cell">
                         {{name}}
@@ -42,6 +47,11 @@
                 </tr>
                 {{/each}}
                 </table>
+            </div>
+
+            <div class="b-table-buttons">
+                <input type="button" class="btn btn-primary b-table-button js-table-button js-table-button--callform" value="Add"/>
+                <input type="button" class="btn btn-danger b-table-button js-table-button js-table-button--remove" value="Delete"/>
             </div>
         </script>
 
