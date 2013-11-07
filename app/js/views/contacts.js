@@ -8,6 +8,10 @@ App.Views.Contacts = Backbone.View.extend({
     model: App.viewmodels.contacts,
     template: Handlebars.compile($('#table').html()),
 
+    events: {
+        'click .js-table-button--callform': 'showForm'
+    },
+
     initialize: function () {
         this.render();
         this.listenTo(App.viewmodels.contacts.contactsCollection, 'all', this.render);
@@ -17,5 +21,9 @@ App.Views.Contacts = Backbone.View.extend({
         this.$el
             .html(this.template(this.model.getContacts()))
             .appendTo(App.view.partials.$table);
+    },
+
+    showForm: function () {
+        App.view.partials.$form.removeClass('hide');
     }
 });

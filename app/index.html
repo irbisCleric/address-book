@@ -28,31 +28,44 @@
 
         <div class="container">
             <div class="col-md-3 l-table js-table"></div>
+            <div class="col-sm-4 l-form js-form hide"></div>
         </div>
 
         <script type="text/x-handlebars-template" id="table">
-            <div class="b-contacts-container">
-                <table class="b-contacts-list">
-                <tr class="b-contacts-table-row">
-                    <th class="b-contacts-table-head">User pic</th>
-                    <th class="b-contacts-table-head">User name</th>
+            <table class="table table-condensed">
+                <tr>
+                    <th>User pic</th>
+                    <th>User name</th>
                 </tr>
-                {{#each contacts}}
-                <tr class="js-contacts-list-row">
-                    <td class="b-contacts-list-cell b-cell--icon">
-                    </td>
-                    <td class="b-contacts-list-cell">
-                        {{name}}
-                    </td>
-                </tr>
-                {{/each}}
-                </table>
+            {{#each contacts}}
+            <tr class="js-contacts-list-row">
+                <td>
+                    ----/----
+                </td>
+                <td>
+                    {{name}}
+                </td>
+            </tr>
+            {{/each}}
+            </table>
+
+            <div class="col-xs-6 col-sm-3">
+                <button type="button" class="btn btn-primary btn-block js-table-button--callform">Submit</button>
+                <button type="button" class="btn btn-danger btn-block js-table-button--remove">Clear</button>
+            </div>
+        </script>
+
+        <script type="text/x-handlebars-template" id="form">
+
+            <div class="well b-form-body">
+                <div class="form-group b-form-field">
+                    <label for="name">User name:</label>
+                    <input type="text" name="name" id="name" class="form-control">
+                </div>
+                <button type="button" class="btn btn-primary btn-block js-form-button--submit">Submit</button>
+                <button type="button" class="btn btn-default btn-block js-form-button--clear">Clear</button>
             </div>
 
-            <div class="b-table-buttons">
-                <input type="button" class="btn btn-primary b-table-button js-table-button js-table-button--callform" value="Add"/>
-                <input type="button" class="btn btn-danger b-table-button js-table-button js-table-button--remove" value="Delete"/>
-            </div>
         </script>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -69,6 +82,7 @@
         <script src="js/models/contacts.js"></script>
         <script src="js/views/workspace.js"></script>
         <script src="js/views/contacts.js"></script>
+        <script src="js/views/form.js"></script>
 
     </body>
 </html>

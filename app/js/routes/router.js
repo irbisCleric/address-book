@@ -21,6 +21,7 @@ App.Routers.Workspace = Backbone.Router.extend({
     // #index
         App.router.navigate('index');
         new App.Views.Contacts();
+        new App.Views.Form();
     },
 
     page404: function () {
