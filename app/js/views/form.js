@@ -9,6 +9,11 @@ App.Views.Form = Backbone.View.extend({
     model: App.viewmodels.contacts,
     template: Handlebars.compile($('#form').html()),
 
+    events: {
+        'click .js-form-button--submit': 'addConctact',
+        'click .js-form-button--clear': 'clearForm'
+    },
+
     initialize: function () {
         this.render();
     },
@@ -17,5 +22,17 @@ App.Views.Form = Backbone.View.extend({
         this.$el
             .html(this.template())
             .appendTo(App.view.partials.$form);
+    },
+
+    addConctact: function () {
+        this.model.addContactData({
+            name: this.$el.find('[name="name"]').val()
+        });
+        this.render();
+    },
+
+    clearForm: function () {
+        this.render();
     }
+
 });

@@ -24,6 +24,15 @@ App.Models.Contacts = Backbone.Model.extend({
         return {
             contacts: this.contactsCollection.toJSON()
         };
+    },
+
+    addContactData: function (contacts) {
+        if (_.some(_.toArray(contacts))) {
+            this.contactsCollection.add(contacts);
+        }
+        else {
+            alert('Пустое поле!');
+        }
     }
 
 });
