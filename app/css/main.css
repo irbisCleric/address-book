@@ -101,6 +101,14 @@ body {
     background-color: #EEEEEE;
 }
 
+.b-contacts .table td {
+    vertical-align: middle;
+}
+
+.b-contacts .table th {
+    cursor: pointer;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

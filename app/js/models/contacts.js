@@ -15,9 +15,16 @@ App.Models.Contacts = Backbone.Model.extend({
     contactsCollection: null,
 
     initialize: function () {
-        this.contactsCollection = new App.Collections.Contacts([{
-            name: 'Test name for field'
-        }]);
+        this.contactsCollection = new App.Collections.Contacts([
+            {name: 'Dretinon'},
+            {name: 'Aughos'},
+            {name: 'Nalnsay'},
+            {name: 'Thergar'},
+            {name: 'Morlye'},
+            {name: 'Ight\'pola'},
+            {name: 'Erutan'}
+
+        ]);
     },
 
     getContacts: function () {

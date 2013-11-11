@@ -9,7 +9,8 @@ App.Views.Contacts = Backbone.View.extend({
     template: Handlebars.compile($('#table').html()),
 
     events: {
-        'click .js-table-button--callform': 'showForm'
+        'click .js-table-button--callform': 'showForm',
+        'click.js-header_name': 'sortPanel'
     },
 
     initialize: function () {
@@ -25,5 +26,9 @@ App.Views.Contacts = Backbone.View.extend({
 
     showForm: function () {
         App.view.partials.$form.removeClass('hide');
+    },
+
+    sortPanel: function() {
+
     }
 });
