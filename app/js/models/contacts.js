@@ -40,6 +40,10 @@ App.Models.Contacts = Backbone.Model.extend({
         else {
             alert('Пустое поле!');
         }
+    },
+
+    sortContactData: function (contacts) {
+        this.contactsCollection.sortBy("name");
     }
 
 });

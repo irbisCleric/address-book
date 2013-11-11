@@ -10,7 +10,7 @@ App.Views.Contacts = Backbone.View.extend({
 
     events: {
         'click .js-table-button--callform': 'showForm',
-        'click.js-header_name': 'sortPanel'
+        'click .js-header_name': 'sortPanel'
     },
 
     initialize: function () {
@@ -28,7 +28,8 @@ App.Views.Contacts = Backbone.View.extend({
         App.view.partials.$form.removeClass('hide');
     },
 
-    sortPanel: function() {
-
+    sortPanel: function () {
+        this.model.sortContactData();
+        this.render();
     }
 });
