@@ -39,5 +39,6 @@ App.Views.Contacts = Backbone.View.extend({
         console.log($header);
 
         this.render();
+        Holder.run();
     }
 });
