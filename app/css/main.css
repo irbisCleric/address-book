@@ -109,8 +109,12 @@ body {
     cursor: pointer;
 }
 
-.js-sort {
+.js-asc {
     background-color: #ffff00;
+}
+
+.js-desc {
+    background-color: #808080;
 }
 
 

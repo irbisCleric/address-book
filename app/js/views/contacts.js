@@ -35,7 +35,7 @@ App.Views.Contacts = Backbone.View.extend({
         this.model.sortContactData();
 
         $header
-            .toggleClass('js-sort');
+            .toggleClass('js-asc');
         console.log($header);
 
         this.render();
