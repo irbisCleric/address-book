@@ -107,6 +107,7 @@ body {
 
 .b-contacts .table th {
     cursor: pointer;
+    border-bottom: 0;
 }
 
 .b-header_name {
