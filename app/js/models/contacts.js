@@ -43,7 +43,11 @@ App.Models.Contacts = Backbone.Model.extend({
     },
 
     sortContactData: function (contacts) {
-        this.contactsCollection.sortBy("name");
+        this.contactsCollection.comparator = function (user) {
+            return user.get("name").toLowerCase();
+        };
+
+        this.contactsCollection.sort();
     }
 
 });
