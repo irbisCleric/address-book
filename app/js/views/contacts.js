@@ -29,10 +29,11 @@ App.Views.Contacts = Backbone.View.extend({
     },
 
     sortPanel: function (event) {
-        var $header = $(event.currentTarget);
+        var $header = $(event.currentTarget),
+            sort_status = true;
 
-        var sort_status = true;
         this.model.sortContactData();
+
         $header
             .toggleClass('js-sort');
         console.log($header);
