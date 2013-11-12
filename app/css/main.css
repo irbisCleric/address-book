@@ -109,6 +109,10 @@ body {
     cursor: pointer;
 }
 
+.b-header_name {
+    display: block;
+}
+
 .js-asc {
     background-color: #ffff00;
 }
