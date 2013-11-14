@@ -28,17 +28,13 @@ App.Views.Contacts = Backbone.View.extend({
         App.view.partials.$form.removeClass('hide');
     },
 
-    sortPanel: function (event) {
-        var $header = $(event.currentTarget),
-            sort_status = true;
+    sortPanel: function () {
 
         this.model.sortContactData();
 
-        $header
-            .toggleClass('js-asc');
-        console.log($header);
+        $('.js-header_name')
+            .addClass('js-asc');
 
-        this.render();
         Holder.run();
     }
 });
