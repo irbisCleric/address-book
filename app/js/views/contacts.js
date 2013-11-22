@@ -29,11 +29,10 @@ App.Views.Contacts = Backbone.View.extend({
     },
 
     sortPanel: function () {
-
         this.model.sortContactData();
 
-        App.view.partials.$form_head_name
-            .toggleClass('js-asc');
+        App.view.partials.$form_head_name.remove();
+            //.addClass('js-asc');
 
         Holder.run();
     }

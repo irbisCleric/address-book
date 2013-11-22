@@ -28,6 +28,7 @@ App.Views.Form = Backbone.View.extend({
         this.model.addContactData({
             name: this.$el.find('[name="name"]').val()
         });
+        Holder.run();
         this.render();
     },
 
