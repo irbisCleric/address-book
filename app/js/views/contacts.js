@@ -1,4 +1,4 @@
-/*global $:false, Backbone:false, App:false, Handlebars:false*/
+/*global $:false, Backbone:false, App:false, Handlebars:false, Holder:false*/
 
 'use strict';
 
@@ -22,6 +22,8 @@ App.Views.Contacts = Backbone.View.extend({
         this.$el
             .html(this.template(this.model.getContacts()))
             .appendTo(App.view.partials.$table);
+        
+        console.log(App.view.partials.$form_head_name);
     },
 
     showForm: function () {
@@ -31,9 +33,14 @@ App.Views.Contacts = Backbone.View.extend({
     sortPanel: function () {
         this.model.sortContactData();
 
-        App.view.partials.$form_head_name.remove();
-            //.addClass('js-asc');
+        App.view
+            .partials
+            .$form_head_name
+                .css('backround-color', 'blue');
 
+        console.log(App.view.partials.$form_head_name);
+        
+        this.render();
         Holder.run();
     }
 });
