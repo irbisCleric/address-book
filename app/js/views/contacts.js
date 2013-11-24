@@ -23,7 +23,7 @@ App.Views.Contacts = Backbone.View.extend({
             .html(this.template(this.model.getContacts()))
             .appendTo(App.view.partials.$table);
         
-        console.log(App.view.partials.$form_head_name);
+        console.log(App.view.partials.$table_header);
     },
 
     showForm: function () {
