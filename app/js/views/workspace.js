@@ -13,7 +13,6 @@ App.Views.Workspace = Backbone.View.extend({
             $html: $('html'),
             $body: this.$el,
             $table: $('.js-table', this.$el),
-            $table_header: $('.js-header_name', this.$el),
             $form: $('.js-form', this.$el)
         };
     }
