@@ -29,7 +29,8 @@ App.Models.Contacts = Backbone.Model.extend({
 
     getContacts: function () {
         return {
-            contacts: this.contactsCollection.toJSON()
+            contacts: this.contactsCollection.toJSON(),
+            isAsc: this.get('isAsc')
         };
     },
 

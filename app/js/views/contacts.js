@@ -33,10 +33,10 @@ App.Views.Contacts = Backbone.View.extend({
 
         this.render();
         
-        App.view.partials
+        /*App.view.partials
             .$table
             .find(".js-header_name")
-            .css("background-color", "green");
+            .css("background-color", "green");*/
         
         Holder.run();
     }

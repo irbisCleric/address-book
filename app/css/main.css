@@ -114,12 +114,12 @@ body {
     display: block;
 }
 
-.js-asc {
-    background-color: #ffff00;
+.js-header_name--asc {
+    background-color: blue;
 }
 
-.js-desc {
-    background-color: #808080;
+.js-header_name--desc {
+    background-color: red;
 }
 
 
