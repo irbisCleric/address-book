@@ -13,6 +13,10 @@
 App.Models.Contacts = Backbone.Model.extend({
 
     contactsCollection: null,
+    
+    defaults: {
+        isAsc: true,
+    },
 
     initialize: function () {
         this.contactsCollection = new App.Collections.Contacts([

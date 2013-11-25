@@ -33,6 +33,8 @@ App.Views.Contacts = Backbone.View.extend({
 
         this.render();
         
+        this.model.set('isAsc', !this.model.get('isAsc'));
+        
         /*App.view.partials
             .$table
             .find(".js-header_name")
